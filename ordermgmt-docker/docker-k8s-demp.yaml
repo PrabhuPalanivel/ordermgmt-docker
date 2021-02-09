@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ordermgmt-docker-deployment
+  labels:
+   app: ordermgmt-docker
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+    app: ordermgmt-docker
+  template:
+    metadata:
+      labels:
+        app: ordermgmt-docker
+    spec:
+      containers:
+        - name: ordermgmt-docker
+          image: prabhupalanivel/ordermgmt-docker
+          ports:
+            - containerPort: 8866

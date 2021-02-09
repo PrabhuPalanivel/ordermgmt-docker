@@ -1,0 +1,27 @@
+spring:
+ application:
+    name: ordermgmt-docker
+ jpa:
+  show-sql: true
+  hibernate:
+   ddl-auto : none
+   naming: # must tell spring/jpa/hibernate to use the column names as specified, not snake case
+    physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+ datasource:
+  password: root
+  url: jdbc:mysql://localhost:3306/superleague
+  username: root
+   
+server:
+ port: 8866
+ servlet:
+  context-path: /dev
+
+logging:
+  level:
+    root: INFO
+    com.sl.ms.ordermanagement: TRACE
+  file:
+    name: C:/Users/prabh/eclipse-workspace/SuperLeague/Java8/application-debug.log
+   
