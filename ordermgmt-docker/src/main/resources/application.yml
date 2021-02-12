@@ -4,7 +4,7 @@ spring:
  jpa:
   show-sql: true
   hibernate:
-   ddl-auto : none
+   ddl-auto : update
    naming: # must tell spring/jpa/hibernate to use the column names as specified, not snake case
     physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
