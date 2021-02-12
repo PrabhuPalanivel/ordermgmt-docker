@@ -2,22 +2,17 @@ spring:
  application:
     name: ordermgmt-docker
  jpa:
-  database-platform: org.hibernate.dialect.MySQL8Dialect
-  generate-ddl: true
-  show-sql: true   
+  show-sql: true
   hibernate:
    ddl-auto : none
    naming: # must tell spring/jpa/hibernate to use the column names as specified, not snake case
     physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
  datasource:
-  driver-class-name: com.mysql.cj.jdbc.Driver
-#  url: jdbc:mysql://${DB_HOST}/${DB_NAME}?useSSL=false
+  password: root
   url: jdbc:mysql://mysql-test:3306/superleague
-  username: test
-  password: test
-  hikari:
-    initialization-fail-timeout: 0        
+  username: root
+     
 server:
  port: 8866
  servlet:
