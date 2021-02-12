@@ -10,7 +10,7 @@ spring:
     implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
  datasource:
   password: root
-  url: jdbc:mysql://mysqldbtest:3306/superlg
+  url: jdbc:mysql://34.73.193.145:3306/superleague
   username: root
      
 server:
