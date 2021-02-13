@@ -13,6 +13,7 @@ spring:
   url: jdbc:mysql://steady-life-303919:us-east1:ppmysql:3306/superleague
   username: root
      
+     
 server:
  port: 8866
  servlet:
